@@ -5,6 +5,29 @@ let names = "julia"
 let age = "67"
 
 
+
+console.log( names[ 0 ] )
+console.log( names[ 1 ] )
+console.log( names[ 2 ] )
+console.log( names[ 3 ] )
+console.log( names[ 4 ] )
+
+
+
+
+//console.log( "my name is " + names + ( 67 - 34 ) )
+
+
+
+
+
+let gender = "male"
+
+console.log( `My name is Daniel and i am a ${gender} and the next year will be ${2023 + 2}` )
+
+console.log( gender.split( "" ) )
+
+
 // Methods of Manipulating a String
 //check for a palindrome
 console.log( names[ 4 ] )
@@ -122,7 +145,7 @@ for ( let i = 0; i <= 50; i += 2 ) {
 
 for ( let i = 1; i <= 12; i++ ) {
     // console.log( '2 x ' + i + " = " + 2 * i )
-    // console.log( `2 * ${i} = ${2 * i}` )
+    // console.log( `2 * ${ i } = ${ 2 * i } ` )
 }
 
 let givenNumber = 4
@@ -151,18 +174,16 @@ for ( let i = 4; i >= 1; i-- ) {
 //     }
 // }
 
-for ( let i = 2; i <= 50; i++ ) {
-    for ( let j = 2; j < i; j++ ) {
-        if ( i % 2 === 0 ) {
-            break;
-        }
-    }
-    if ( 2 === i ) {
-        console.log( i );
+
+// TO print out only prime number from 1 to 100
+for ( let i = 2; i <= 100; i++ ) {
+    if ( i == 3 ) {
+        console.log( i )
+    } else if ( i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0 ) {
+        console.log( i )
     }
 }
 
-console.log( "hello" )
 
 
 
