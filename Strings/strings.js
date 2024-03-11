@@ -1,0 +1,181 @@
+// String is a Data Type
+
+
+let names = "julia"
+let age = "67"
+
+
+// Methods of Manipulating a String
+//check for a palindrome
+console.log( names[ 4 ] )
+console.log( names[ 0 ] )
+
+
+// madam
+// mallam
+
+
+
+
+let newName = names.split( "" )
+
+console.log( newName )
+
+console.log( newName.reverse() )
+
+
+console.log( newName.join( "" ) )
+
+
+
+
+let nam1 = "fatia"
+console.log( nam1.split( "" ) )
+
+let nameval = nam1.split( "" );
+
+console.log( nameval )
+
+console.log( nameval.join( "" ) )
+
+
+// String Concatenation
+
+let age1 = 32;
+
+// print out I am 32 yeasr Old
+
+console.log( "I am " + age1 + " years old" )
+
+console.log( `I am ${age1} years old` )
+
+// print =>  i am 45 years old
+
+console.log( 'i am ' + 32 + 13 + " years old" )
+
+
+// Type Conversion
+
+
+console.log( 'i am ' + Number( 32 + 13 ) + " years old" )
+
+console.log( `I am ${Number( 32 + 13 )} years old` )
+
+
+let num1 = "David"
+let num2 = 5
+console.log( num1 - num2 )
+
+
+
+let checkForPalindrome = "mallam"
+// let check_for_palindrome
+
+//convert name to an arrray
+//step1
+let nameConverted = checkForPalindrome.split( "" )
+
+
+//step 2
+//reverse the array
+nameConverted = nameConverted.reverse()
+
+
+//step 3
+//convert the reverserd array back to a string
+nameConverted = nameConverted.join( "" )
+
+// let a = [ 1, 2, 3 ]
+// let b = [ 1, 2, 3 ]
+
+
+//let uys check for a plaindrom
+
+if ( checkForPalindrome === nameConverted ) {
+    console.log( "You have a palindrom" )
+} else {
+    console.log( "Not a Palindrom" )
+}
+
+console.log( nameConverted )
+
+// mallam
+// madam
+// dad
+// mom
+
+
+
+
+//check if number is divisible by 2 - 2-50
+// for ( let i = 0; i <= 50; i++ ) {
+//     if ( i % 2 == 0 ) {
+//         console.log( i )
+//     }
+// }
+
+
+for ( let i = 0; i <= 50; i += 2 ) {
+    console.log( i )
+}
+
+
+for ( let i = 1; i <= 12; i++ ) {
+    // console.log( '2 x ' + i + " = " + 2 * i )
+    // console.log( `2 * ${i} = ${2 * i}` )
+}
+
+let givenNumber = 4
+
+// calculate the factorial of a given number
+
+
+let accumulator = 1
+for ( let i = 4; i >= 1; i-- ) {
+    accumulator = accumulator * i;
+}
+
+// acc = 1 * 4 = 4
+// acc = 4 * 3 = 12
+// acc = 12 * 2 = 24
+// acc = 24 * 1 = 24
+
+
+// console.log( accumulator )
+
+
+
+// for ( let i = 2; i < 50; i += 1 ) {
+//     if ( i % 2 != 0 && i >= 3 && i % 3 != 0 ) {
+//         console.log( i )
+//     }
+// }
+
+for ( let i = 2; i <= 50; i++ ) {
+    for ( let j = 2; j < i; j++ ) {
+        if ( i % 2 === 0 ) {
+            break;
+        }
+    }
+    if ( 2 === i ) {
+        console.log( i );
+    }
+}
+
+console.log( "hello" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

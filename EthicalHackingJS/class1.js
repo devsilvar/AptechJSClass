@@ -157,7 +157,7 @@ const newStudent = new AptechStudent( "Femi", 50 )
 
 
 
-// assignments
+//assignments
 
 // Write a Javascript Program by doing the following
 
@@ -168,6 +168,18 @@ const newStudent = new AptechStudent( "Femi", 50 )
 // - Create a variable and store your Department inside it
 
 // - And give me this Output =>
+
+
+let myName = "amir";
+
+let myGender = "Male";
+
+let myDept = "Ethical Hacking"
+
+let finalVariable = "My Name is " + myName + " , I am a " + myGender + " ," + " I am Studying " + myDept + "  at Aptech"
+
+
+console.log( finalVariable )
 
 "My Name is ------"
 "I am a -----"

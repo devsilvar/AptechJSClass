@@ -1,4 +1,5 @@
 // EQUALITY OPERATOR (!=, !==, ==, ===)
+
 let cash = 2000;
 let expenses = '2000';
 
