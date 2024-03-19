@@ -8,17 +8,17 @@
 let myAge = 20;
 let eligibleVoterAge = 18;
 
-if (myAge >= eligibleVoterAge) {
+if ( myAge >= eligibleVoterAge ) {
   // output is when condition evaluates to true
-  console.log("Eligible to vote");
+  console.log( "Eligible to vote" );
 } else {
   // output is when condition evaluates to false
-  console.log("Not eligible to vote");
+  console.log( "Not eligible to vote" );
 }
 
 // IF
 // if (condition) {
-    
+
 // }
 
 
@@ -39,24 +39,30 @@ if (myAge >= eligibleVoterAge) {
 
 let mathScore = -12;
 
-if (mathScore >= 70 && mathScore <= 100) {
-  console.log("A1");
-} else if (mathScore >= 65 && mathScore <= 69) {
-  console.log("B2");
-} else if (mathScore >= 60 && mathScore <= 64) {
-  console.log("B3");
-} else if (mathScore >= 55 && mathScore <= 59) {
-  console.log("C4");
-} else if (mathScore >= 50 && mathScore <= 54) {
-  console.log("C5");
-} else if (mathScore >= 45 && mathScore <= 49) {
-  console.log("C6");
-} else if (mathScore >= 40 && mathScore <= 44) {
-  console.log("D7");
-} else if (mathScore >= 31 && mathScore <= 39) {
-  console.log("E8");
-} else if (mathScore >=0 && mathScore <=30) {
-  console.log("F9");
+if ( mathScore >= 70 && mathScore <= 100 ) {
+  console.log( "A1" );
+} else if ( mathScore >= 65 && mathScore <= 69 ) {
+  console.log( "B2" );
+} else if ( mathScore >= 60 && mathScore <= 64 ) {
+  console.log( "B3" );
+} else if ( mathScore >= 55 && mathScore <= 59 ) {
+  console.log( "C4" );
+} else if ( mathScore >= 50 && mathScore <= 54 ) {
+  console.log( "C5" );
+} else if ( mathScore >= 45 && mathScore <= 49 ) {
+  console.log( "C6" );
+} else if ( mathScore >= 40 && mathScore <= 44 ) {
+  console.log( "D7" );
+} else if ( mathScore >= 31 && mathScore <= 39 ) {
+  console.log( "E8" );
+} else if ( mathScore >= 0 && mathScore <= 30 ) {
+  console.log( "F9" );
 } else {
-  console.log('Invalid score')
+  console.log( 'Invalid score' )
 }
+
+let name = "ade"
+console.log( name )
+alert( name )
+
+document.write( name )

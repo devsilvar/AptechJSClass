@@ -195,6 +195,15 @@ for ( let i = 1; i < 10; i = i + 2 ) {
 
 
 
+// MRs Bukky 
+
+// - Write an if...else statement that checks whether a number entered by the user is positive, zero, or negative. Display a corresponding message accordingly.
+
+// - Given two variables num1 and num2, write an if...else statement that determines which number is larger and displays a message indicating so. If they are equal, display a separate message.
+
+// - Given a boolean variable called hasPassedExam, write an if...else statement that displays "Congratulations, you passed!" if true, and "Sorry, please study harder next time :(" if false.
+
+
 
 
 
