@@ -1,11 +1,32 @@
 // String is a Data Type
 
 
+
+
+let age = Number( "67" ) + Number( "34" )
+
+console.log( age )
+
+console.log( typeof ( age ) )
+
+
+
+
+
+
+
+
 let names = "julia"
-let age = "67"
 
 
 
+
+// names[0]
+// names[1]
+// names[2]
+
+
+//acessing each number in an array
 console.log( names[ 0 ] )
 console.log( names[ 1 ] )
 console.log( names[ 2 ] )
@@ -18,6 +39,19 @@ console.log( names[ 4 ] )
 //console.log( "my name is " + names + ( 67 - 34 ) )
 
 
+
+
+//to join string and number you can achie that using backticsk `````
+
+
+
+let userDOB = 1999
+
+//outp => i am 12 years old
+
+//console.log( `I am ${2024 - userDOB} years old` )
+
+console.log( "i am " + ( 2024 - 1999 ) + " years old" )
 
 
 
@@ -34,10 +68,18 @@ console.log( names[ 4 ] )
 console.log( names[ 0 ] )
 
 
+
+let putArr = " i am a boy"
+
+
+console.log( putArr.split( " " ).reverse() )
 // madam
 // mallam
 
 
+let covvertStr = putArr.split( " " ).reverse().join( " " )
+
+console.log( covvertStr )
 
 
 let newName = names.split( "" )
@@ -147,6 +189,8 @@ for ( let i = 1; i <= 12; i++ ) {
     // console.log( '2 x ' + i + " = " + 2 * i )
     // console.log( `2 * ${ i } = ${ 2 * i } ` )
 }
+
+
 
 let givenNumber = 4
 

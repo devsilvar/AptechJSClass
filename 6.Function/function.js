@@ -100,3 +100,8 @@ function addAnyNumber () {
 
 //create a function that collect the users firstname and lastname and prints out => My name is femi gideon
 // use prompt to get the first name and last name
+
+
+
+
+
