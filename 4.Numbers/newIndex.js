@@ -153,7 +153,12 @@ setInterval( () => {
 // }, 1000 );
 
 
+localStorage.setItem( "studentAge", 70 )
 
+localStorage.removeItem( "studentAge" )
+
+
+sessionStorage.setItem( "APname", "Lotana" )
 
 
 
