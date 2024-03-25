@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 40%;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 25px;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      label {
+        text-align: left;
+        padding: 5px 0;
+        display: block;
+      }
+
+      button {
+        margin: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="">Total Income</label>
+      <input type="number" id="income" />
+
+      <label for="">Rent</label>
+      <input type="number" />
+
+      <label for="">Groceries</label>
+      <input type="number" />
+
+      <label for="">Utilities</label>
+      <input type="number" />
+
+      <label for="">Transportation</label>
+      <input type="number" />
+
+      <label for="">Leisure</label>
+      <input type="number" />
+    </form>
+    <button type="button">Submit</button>
+
+    <div>
+      <p>Total Income: <span> </span></p>
+      <p>Total Expenses <span> </span></p>
+      <p>Remaing Balance <span> </span></p>
+    </div>
+  </body>
+</html>
