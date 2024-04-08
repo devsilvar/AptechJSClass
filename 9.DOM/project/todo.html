@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      width: 70%;
+      margin: 20px auto;
+    }
+
+    table tr th,
+    table tr td {
+      padding: 5px;
+      text-align: center;
+    }
+
+    fieldset {
+      width: 40%;
+      margin: auto;
+    }
+
+    label {
+    }
+
+    .todo div {
+      width: 90%;
+      margin: 15px auto;
+    }
+
+    .todo input {
+      width: 100%;
+    }
+
+    .centers {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <h2>Student Records</h2>
+    <fieldset>
+      <div class="todo">
+        <div>
+          <label for="" class="tts">Enter Your Name</label>
+          <input type="text" id="name" placeholder="Enter Your name" />
+        </div>
+
+        <div>
+          <label for="">Enter Your Age</label>
+          <input type="number" id="age" placeholder="Enter Your Age" />
+        </div>
+
+        <div>
+          <label for="">Enter Your Hobby</label>
+          <input
+            type="text"
+            name=""
+            id="hobby"
+            placeholder="Enter your Hobby"
+          />
+        </div>
+
+        <div class="centers">
+          <button onclick="CollectInputs ()">Add Record</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <table border="1" align="center">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Hobby</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+
+      <tbody id="display"></tbody>
+    </table>
+    <script src="app.js"></script>
+  </body>
+</html>

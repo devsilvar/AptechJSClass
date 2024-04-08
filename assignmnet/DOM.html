@@ -36,26 +36,27 @@
       <input type="number" id="income" />
 
       <label for="">Rent</label>
-      <input type="number" />
+      <input type="number" id="rent" />
 
       <label for="">Groceries</label>
-      <input type="number" />
+      <input type="number" id="grocery" />
 
       <label for="">Utilities</label>
-      <input type="number" />
+      <input type="number" id="utility" />
 
       <label for="">Transportation</label>
-      <input type="number" />
+      <input type="number" id="transport" />
 
       <label for="">Leisure</label>
-      <input type="number" />
+      <input type="number" id="leisure" />
     </form>
-    <button type="button">Submit</button>
+    <button type="button" onclick="GenrateBudget ()">Submit</button>
 
     <div>
-      <p>Total Income: <span> </span></p>
-      <p>Total Expenses <span> </span></p>
+      <p>Total Income: <span id="Tincome"> </span></p>
+      <p>Total Expenses <span id="TExpennse"> </span></p>
       <p>Remaing Balance <span> </span></p>
-    </div>
+      
+    <script src="DOM.js"></script>
   </body>
 </html>

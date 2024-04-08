@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        padding: 20px;
+        border: 1px solid brown;
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="easter"></div>
+
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        console.log(i);
+
+        document.getElementById(
+          'easter'
+        ).innerHTML += `<div class="box">  ${i} </div>`;
+      }
+    </script>
+  </body>
+</html>

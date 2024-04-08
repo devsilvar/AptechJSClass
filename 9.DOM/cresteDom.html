@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu {
+        background-color: black;
+        color: white;
+        padding: 5px;
+      }
+      .active {
+        background-color: white;
+        color: black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="subjects">
+      <li onclick="switchClass()" class="menu">Maths</li>
+      <li onclick="switchClass()" class="menu active">Science</li>
+      <li onclick="switchClass()" class="menu">English</li>
+      <li onclick="switchClass()" class="menu">Physics</li>
+    </ul>
+
+    <script src="createDom.js"></script>
+  </body>
+</html>
