@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      form {
+        width: 25%;
+        height: 15vh;
+        margin: auto;
+        border: 1px solid transparent;
+        background-color: orange;
+      }
+
+      #list {
+        width: 25%;
+        margin: auto;
+        margin-top: 20px;
+      }
+      label {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      input {
+        text-align: center;
+        height: 20px;
+        border: 2px solid black;
+        padding: 0 10%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      #form-inputs {
+        padding-top: 3vh;
+      }
+
+      li {
+        width: 94%;
+        border: 2px solid orange;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 3%;
+        margin-bottom: 10px;
+        font-size: large;
+      }
+
+      li:hover {
+        text-decoration: line-through;
+        color: red;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: black;
+        color: orange;
+        width: 30%;
+        padding: 5px 8px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 align="center">Welcome to the Javscript Modules Class</h2>
+    <div id="root"></div>
+
+    <h3 align="center">Student Records</h3>
+
+    <form id="item-form">
+      <label for="newItem"> Enter an Item</label>
+      <div align="center" id="form-inputs">
+        <input type="text" id="itemInput" />
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <div id="list"></div>
+
+    <!-- A mdle keyword has to be added to the javascirpt fle else it wont work -->
+    <script src="new.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
+  </body>
+</html>

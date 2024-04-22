@@ -15,3 +15,6 @@ function realTime () {
         document.getElementById( 'regx' ).style.color = 'red'
     }
 }
+
+
+

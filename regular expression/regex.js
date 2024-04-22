@@ -225,3 +225,5 @@ for number[ 0 - 9 ]
 // const regexPatternForEmail = /^[(\w\d\W)+]+@[\w+]+\.[\w+]+$\i/
 
 
+
+
