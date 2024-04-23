@@ -126,16 +126,54 @@ console.log( cir )
 
 
 // Assignment
-let mult = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
-function HCOC ( num, mult ) {
+function table ( num ) {
+    for ( let i = 0; i <= 12; i++ ) {
+        return `${num} x ${i} = ${num * 1}`
+    }
 }
 
+function multTable ( num, callback ) {
+    return callback( num )
+}
+
+multTable( 5, table )
+
+
+
+
 let studentArr = [
-    { name: "ade", age: 12, gender: "male" },
-    { name: "ade", age: 16, gender: "male" },
-    { name: "ade", age: 18, gender: "male" },
-    { name: "ade", age: 22, gender: "male" },
-    { name: "ade", age: 25, gender: "male" }
+    { name: "Tade", age: 12, gender: "male" },
+    { name: "bolade", age: 16, gender: "Female" },
+    { name: "bade", age: 18, gender: "male" },
+    { name: "shade", age: 22, gender: "Female" },
+    { name: "laide", age: 25, gender: "Female" }
 ]
 
+
+let filteredValues = studentArr.filter( person => person.gender == "Female" )
+
+
+console.log( filteredValues )
+
+
+
+
+
 // Given an array of objects representing students, calculate the sum of the age of all the students who have an age greater than 18.
+
+
+
+function table ( num ) {
+    for ( let i = 1; i <= 12; i++ ) {
+        let result = `${num} x ${i} = ${num * i}`
+        console.log( result )
+    }
+}
+
+
+function HOF ( num, callback ) {
+    return callback( num )
+}
+
+
+HOF(5, table)

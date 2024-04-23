@@ -1,5 +1,10 @@
+
+// storage vairble
 let TodoList;
+
 let index;
+
+
 if ( localStorage.TodoList ) {
     TodoList = JSON.parse( localStorage.getItem( "TodoList" ) )
 } else {
@@ -21,6 +26,8 @@ function hideFormAndOverlay () {
     document.querySelector( 'fieldset' ).style.display = "none";
     document.querySelector( '.overlay' ).style.display = "none";
 }
+
+
 hideFormAndOverlay()
 
 
@@ -31,17 +38,19 @@ function kikstartBtn () {
     document.querySelector( '.overlay' ).style.display = "block";
 }
 
+document.querySelector( "#modalBtn" ).addEventListener( 'click', kikstartBtn )
+
 function loadState () {
     document.querySelector( "#updateBtn" ).classList.add( 'hidden' )
     document.querySelector( "#submitTask" ).classList.add( 'block' )
-    document.querySelector( "#modalBtn" ).addEventListener( 'click', kikstartBtn )
 }
 loadState()
+
+
 
 function closeFormAndOverlay () {
     document.querySelector( "#updateBtn" ).classList.add( "hidden" )
     document.querySelector( "#submitTask" ).classList.remove( 'hidden' )
-
 
     document.querySelector( 'fieldset' ).style.display = "none"
     document.querySelector( '.overlay' ).style.display = "none";
@@ -92,6 +101,7 @@ function ProcessAndSendInput () {
     } else {
 
         TodoList = [ currenTodo, ...TodoList ]
+        console.log( TodoList )
         localStorage.setItem( "TodoList", JSON.stringify( TodoList ) )
 
         AddToDom();

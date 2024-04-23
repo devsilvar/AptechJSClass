@@ -1,7 +1,7 @@
 //where we will collect teh user Input
 let TodoList = [];
 
-
+localStorage.setItem( "user", "Fatia" )
 //collect user input
 let Task = document.getElementById( "task" );
 let Time = document.getElementById( "time" );
@@ -56,7 +56,7 @@ function resetForm () {
 
 function deleteTodo ( i ) {
   console.log( "Delete operation" );
-  
+
   TodoList.splice( i, 1 );
   AddToDom();
 }
