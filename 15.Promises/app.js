@@ -2,11 +2,12 @@
 
 // console.log( 1 )
 // console.log( 2 )
-
 // setTimeout( () => {
 //     console.log( 3 )
 // }, 1000 );
 // console.log( 4 )
+
+
 
 
 // 3 came out last because it took it 1 secods to finish executing
@@ -25,6 +26,30 @@
 //     console.log( 3 )
 // }, 1000 );
 // console.log( 4 )
+
+//NOW PROMISE IS BSICALLY SAYING THAT WHEN A PARTICULAR SCENARIO EVALUATES TO TRUE DO SOMETHING< BUT IF IT DOENST THEN DO SOMETHING ELSE
+
+
+
+let p = new Promise( ( resolve, reject ) => {
+    let sum = 2 + 2;
+
+    if ( sum == 4 ) {
+        resolve( "Sucess" )
+    } else {
+        reject( "Failed" )
+    }
+
+} )
+
+//If the Promise is resolved to True then DO Somethings
+
+//Now we can have 
+p.then( ( task1 = 22 ) => setTimeout( () => task1, 3000 ) ).then( ( task2 ) => setTimeout( () => task2 + 2, 6000 ) ).then( ( task3 ) => setTimeout( () => console.log( task3 + 3 ), 2000 ) ).catch( ( err ) => console.log( "Process Failed" ) )
+
+Promise.all( [ p ] ).then( ( data ) => {
+    console.log( data )
+} )
 
 
 // Now what if each of the console has a specific time they used to complete there execution
@@ -49,8 +74,19 @@
 // Now if all these was a Promise, It will wait for the first one to execute before running the second one even if the first on etakes 5 seconds and the second one takes 2 seconds
 
 // Now let me execute what i am talking about
+// are you back from school so that you can work on your taxes
 
+let promiseStatus = "Get Back from School"
 
+const promiseMain = new Promise( ( resolve, reject ) => {
+    if ( promiseStatus == "Get Back from School" ) {
+        setTimeout( () => {
+            resolve( "Fulfiles" )
+        }, 3000 );
+    } else {
+        reject( "Not back from school" )
+    }
+} )
 
 const promise1 = new Promise( ( resolve, reject ) => {
     setTimeout( () => {
@@ -81,9 +117,14 @@ const promise4 = new Promise( ( resolve, reject ) => {
 
 
 
-// Promise.all( [ promise1, promise2, promise3, promise4 ] ).then( ( data ) => {
-//     console.log( data )
-// } )
+//This works perfectly as all the values had to wait for each otherbefore they run
+promiseMain.then( () => console.log( promise1 ) ).then( () => console.log( promise2 ) ).then( () => console.log( promise3 ) ).then( () => console.log( promise4 ) )
+
+
+//This also works too
+Promise.all( [ promise1, promise2, promise3, promise4 ] ).then( ( data ) => {
+    console.log( data )
+} )
 
 
 //you will notice thatno matter how log one taks takes they will still wait for themselves
