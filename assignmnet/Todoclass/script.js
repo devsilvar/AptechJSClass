@@ -202,3 +202,28 @@ function update () {
     }
 }
 
+
+
+class HumanBeing {
+    constructor( name, age ) {
+        this.name = name;
+        this.age = age;
+    }
+
+    GenrateDOB () {
+        return 2024 - this.age
+    }
+
+}
+
+class AptechStudent extends HumanBeing {
+    constructor( name, age, dept, score ) {
+        super( name, age )
+        this.dept = dept;
+        this.score = score;
+    }
+
+    GetDetails () {
+        return `  My name is ${this.name} and i am ${this.age} years old and i visit aptech to learn ${this.dept}`
+    }
+}

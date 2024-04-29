@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      button {
+        display: block;
+        margin-top: 10px;
+      }
+      input {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset style="width: fit-content; padding: 20px; margin: auto">
+      <input
+        type="text"
+        placeholder="Enter the Text You want to check"
+        id="palidrome"
+      />
+      <button onclick="checkPalindrome()">Check For Palidrome</button>
+    </fieldset>
+
+    <div align="center">Results : <span id="result"> </span></div>
+
+    <script>
+      //get the user Input
+      let userInput = document.getElementById('palidrome');
+
+      //check fro palindrome
+      function checkPalindrome() {
+        let INPUT = userInput.value.toLowerCase();
+
+        //Reversing the string
+        let reversedString = INPUT.toLowerCase().split('').reverse().join('');
+        console.log(reversedString);
+
+        if (INPUT == reversedString) {
+          document.getElementById('result').textContent = 'It is a Palindrome';
+        } else {
+          document.getElementById('result').textContent =
+            'It is not a Palindrome';
+        }
+      }
+    </script>
+  </body>
+</html>
