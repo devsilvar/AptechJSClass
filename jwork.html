@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .giveColor {
+        background-color: red;
+        padding: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Todod List</h2>
+
+    <form id="form">
+      <input type="text" placeholder="Enter the Task" id="task" />
+      <input type="text" placeholder="enter your gender" id="gender" />
+      <button type="submit" id="addtask">Add Task</button>
+    </form>
+
+    <button id="filterMale">FIlter male</button>
+
+    <div align="center" id="results"></div>
+
+    <script>
+      let taskList = [];
+      let taskButton = document.getElementById('addtask');
+      let form = document.getElementById('form');
+      let parent;
+      let child;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        //get values
+
+        let task = document.getElementById('task').value;
+        let gender = document.getElementById('gender').value;
+
+        document.getElementById('task').value = '';
+        document.getElementById('gender').value = '';
+        taskList.push({ task: task, gender: gender });
+        parent = document.getElementById('results');
+        child = document.createElement('div');
+
+        taskList.forEach((element) => {
+          child.innerHTML =
+            '<span>' +
+            element.task +
+            '</span>' +
+            '<button>' +
+            element.gender +
+            '</button>';
+          parent.appendChild(child);
+        });
+
+        console.log(taskList);
+      });
+
+      let filterbutton = document.getElementById('filterMale');
+      filterbutton.addEventListener('click', function () {
+        let newTaskList = taskList.filter((item, index) => {
+          return item.gender == 'male';
+        });
+        console.log(newTaskList);
+        newTaskList.map((element) => {
+          child.innerHTML +=
+            '<span>' +
+            element.task +
+            '</span>' +
+            '<button>' +
+            element.gender +
+            '</button>';
+        });
+        parent.appendChild(child);
+      });
+    </script>
+  </body>
+</html>

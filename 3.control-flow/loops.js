@@ -191,9 +191,10 @@ for ( let i = 1; i < 10; i = i + 2 ) {
 // }
 // console.log( "Sum is " + sum );
 
-
-
-
+let flag = true;
+console.log( !flag );                    // false
+flag = false;
+console.log( !flag );                    // true
 
 // MRs Bukky 
 
@@ -210,4 +211,26 @@ for ( let i = 1; i < 10; i = i + 2 ) {
 
 
 
+let lines = 5;
 
+// Initialize an empty string to store the pattern
+let pattern = '';
+
+// Single loop to handle both pattern creation and printing
+for ( let i = 1; i <= lines; i++ ) {
+  // Add a '#' to the pattern string for the current line
+  pattern += '#';
+
+  // Print the pattern for the current line
+  console.log( pattern );
+}
+
+
+
+let pat = "";
+for ( let i = 0; i < 6; i++ ) {
+  pat = pat + "#"
+
+  console.log( pat )
+
+}

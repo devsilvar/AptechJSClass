@@ -1,0 +1,12 @@
+Assignmenet
+1. Create two variables to store two different numbers of your choice.
+
+ 2. Use conditional statements to compare the two numbers and find the largest one.
+
+ If the first number is the largest, multiply it by 5 and store the result in a new variable.
+
+ If the second number divide it by 3 and store the result in a new variable.
+
+ Create a final variable and add the two new variables to it to get a final answer
+
+log the final answer to the console

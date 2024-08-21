@@ -6,8 +6,8 @@
 //Let us Create An H1 Element 
 
 
-const heading = document.createElement( "h1" )
-console.log( heading )
+// const heading = document.createElement( "h1", { class: "first" }, "hello" )
+// console.log( heading )
 
 
 // Now that we have crested the heading where do we want to put it
@@ -22,25 +22,41 @@ console.log( heading )
 
 // FOr the heading we are going to be puting it in th body tag since that is the only parent strucure we have inthis page
 
-//Lets Tagret the Body 
-let body = document.querySelector( 'body' )
+// //Lets Tagret the Body 
+// let body = document.querySelector( 'body' )
 
-//Now let us add the heading we crested inside the Body
+// //Now let us add the heading we crested inside the Body
 
-body.appendChild( heading )
+// body.appendChild( heading )
 
 //Now lets check the Elemenet In the DOM
 
 //Since nothing s there lets us add something to it
 
-heading.innerText = "Hello Aptech Students"
+// heading.innerText = "Hello Aptech Students"
 
 
 // EXMAPLE 2
 const subjects = document.querySelectorAll( ".menu" )
+console.log( subjects )
 function switchClass ( event ) {
-    for ( let i = 0; i < subjects.length; i++ ) {
-        subjects[ i ].classList.remove( 'active' )
-    }
-    event.classList.add( 'active' )
+
+    // for ( let i = 0; i < subjects.length; i++ ) {
+    //     subjects[ i ].classList.remove( 'active' )
+    // }
+
+    event.classList.remove( 'menu' )
 }
+
+
+function YOB ( year ) {
+    let thisYear = 2024
+    let youAge = thisYear - year
+    return youAge
+}
+
+
+console.log( YOB( 1999 ) )
+// console.log("hello")
+
+

@@ -17,6 +17,8 @@ function checkPattern ( exampleNum ) {
     }
   } )
 
+  [8,9,5,'-' , 5,0,7]
+
   for ( let i = 0; i < newArr.length; i++ ) {
     switch ( i ) {
       case 0:
@@ -160,9 +162,9 @@ console.log( ans1 );
 // SPECIAL CHARACTERS
 // ^^^^^^
 
-const regexPattern1 = /^cat/;
+const regexPattern1 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-console.log( regexPattern1.test( "cat and mouse" ) ); // Output: true
+console.log( regexPattern1.test( "tystR45@@scs" ) ); // Output: true
 console.log( regexPattern1.test( "The cat and mouse" ) ); // Output: false because the line does not start with cat
 
 // Without the ^ in the pattern, the output will return true
@@ -180,8 +182,8 @@ console.log( regexPattern.test( "The cat and mouse" ) ); // Output: false
 
 
 // EXAMPLE
-let regEx2 = /\bhello/g  "match every word that starts with helllo"
-let regEx3 = /war\b/g  "match every word that starts with war in a sentence"
+// let regEx2 = /\bhello/g  "match every word that starts with helllo"
+// let regEx3 = /war\b/g  "match every word that starts with war in a sentence"
 
 
 

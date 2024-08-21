@@ -1,4 +1,25 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //here is how to create an Object
 let person = {
     name: "adeabayo",
@@ -101,6 +122,9 @@ class Person {
     printDOB () {
         return "YOur Date of Birth is " + new Date().getFullYear() - this.age
     }
+    printNamegender () {
+        return "YOur Fullname " + this.name
+ + this.gender     }
 }
 
 

@@ -154,6 +154,8 @@ console.log( presenDate.getTime() )  // gives time passed from 1 Jan 1970 till n
 
 
 
+
+
 //How do we make the date keep running in Js
 function Timing () {
     let presentDate1 = new Date()
@@ -166,7 +168,7 @@ function Timing () {
 
 }
 setInterval( () => {
-    // Timing()
+    Timing()
 }, 1000 );
 
 

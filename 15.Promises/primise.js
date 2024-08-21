@@ -30,6 +30,7 @@ let mainPromise = new Promise( ( resovle, reject ) => {
     } else {
         reject( "Julia isnt in Lagos" )
     }
+    
 } )
 
 let FirstTask = new Promise( ( resolve, reject ) => {
@@ -88,6 +89,30 @@ async function GetJson () {
 }
 
 
-GetJson()
+
+
+async function displayPost () {
+    let response = await fetch( 'https://dummyjson.com/products' );
+    let data = await response.json();
+    data = data.products
+    console.log( data );
+
+
+
+
+    data && data.map( ( item ) => {
+        return (
+            document.querySelector( ".post" ).innerHTML += `
+
+    <section class="product">
+    Name : ${item.brand}
+TItle: ${item.title}
+<img class="image" src=" ${item.images[ 0 ]}">
+Price: $${item.price}
+    </section>
+    `
+        )
+    } )
+}
 
 

@@ -193,8 +193,3 @@ for ( let i in car_keys ) {
 // 6. Add a method to the object that calculates how many years until the person turns 100.
 // 7. Display the result.
 
-
-
-
-
-

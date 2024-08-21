@@ -9,6 +9,8 @@ function subtract ( bigNum, smallNum ) {
     console.log( bigNum - smallNum )
 }
 
+
+
 subtract( 10, 5 )
 
 //calculate the modulo of 27 and 3
@@ -101,6 +103,16 @@ function addAnyNumber () {
 //create a function that collect the users firstname and lastname and prints out => My name is femi gideon
 // use prompt to get the first name and last name
 
+
+
+export function checkELigible ( userInput ) {
+    if ( userInput < 18 ) {
+        console.log( "You are not ELigible to Vote" )
+    } else {
+        console.log( "you can Vote" )
+    }
+
+}
 
 
 

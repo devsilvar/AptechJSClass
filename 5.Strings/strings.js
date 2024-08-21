@@ -133,7 +133,7 @@ console.log( num1 - num2 )
 
 
 
-let checkForPalindrome = "mallam"
+let checkForPalindrome = "nursesrun"
 // let check_for_palindrome
 
 //convert name to an arrray
@@ -178,56 +178,6 @@ console.log( nameConverted )
 //         console.log( i )
 //     }
 // }
-
-
-for ( let i = 0; i <= 50; i += 2 ) {
-    console.log( i )
-}
-
-
-for ( let i = 1; i <= 12; i++ ) {
-    // console.log( '2 x ' + i + " = " + 2 * i )
-    // console.log( `2 * ${ i } = ${ 2 * i } ` )
-}
-
-
-
-let givenNumber = 4
-
-// calculate the factorial of a given number
-
-
-let accumulator = 1
-for ( let i = 4; i >= 1; i-- ) {
-    accumulator = accumulator * i;
-}
-
-// acc = 1 * 4 = 4
-// acc = 4 * 3 = 12
-// acc = 12 * 2 = 24
-// acc = 24 * 1 = 24
-
-
-// console.log( accumulator )
-
-
-
-// for ( let i = 2; i < 50; i += 1 ) {
-//     if ( i % 2 != 0 && i >= 3 && i % 3 != 0 ) {
-//         console.log( i )
-//     }
-// }
-
-
-// TO print out only prime number from 1 to 100
-for ( let i = 2; i <= 100; i++ ) {
-    if ( i == 3 ) {
-        console.log( i )
-    } else if ( i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0 ) {
-        console.log( i )
-    }
-}
-
 
 
 

@@ -66,3 +66,6 @@ console.log( name )
 alert( name )
 
 document.write( name )
+
+
+

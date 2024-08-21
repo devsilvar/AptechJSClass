@@ -3,7 +3,6 @@ let num2 = 24
 let num3 = 8
 let num4 = 2
 let answer = num1 + num2;
-
 console.log( answer )
 
 let answer2 = num2 - num1
@@ -13,8 +12,13 @@ let answer3 = num2 * num1
 console.log( answer3 )
 
 
-let answer4 = 2 ** 3
+let answer4 = 2 ** 4
 console.log( answer4 )
+
+
+
+
+
 
 console.log( 8 % 3 )
 

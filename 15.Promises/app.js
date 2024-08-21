@@ -9,6 +9,23 @@
 
 
 
+// she makes an Order -2min
+
+// The Delivery Mand Delivered teh chcikedn - 1hour
+
+// She cooked the chcikedn 20 minutes
+
+setTimeout( () => {
+    console.log( "She Makes an Order" )
+}, 2000 );
+setTimeout( () => {
+    console.log( "The delviery man Delivers teh chcikedm" )
+}, 5000 );
+setTimeout( () => {
+    console.log( "She Cooked The chickem" )
+}, 3000 );
+
+
 
 // 3 came out last because it took it 1 secods to finish executing
 
@@ -42,7 +59,20 @@ let p = new Promise( ( resolve, reject ) => {
 
 } )
 
-//If the Promise is resolved to True then DO Somethings
+    //If the Promise is resolved to True then DO Somethings
+
+//     .then().then().then()
+
+// async await
+
+// function add(a = 2,b = 7){
+//     return a + b
+// }
+// add(4,6)
+
+
+
+
 
 //Now we can have 
 p.then( ( task1 = 22 ) => setTimeout( () => task1, 3000 ) ).then( ( task2 ) => setTimeout( () => task2 + 2, 6000 ) ).then( ( task3 ) => setTimeout( () => console.log( task3 + 3 ), 2000 ) ).catch( ( err ) => console.log( "Process Failed" ) )
@@ -50,6 +80,8 @@ p.then( ( task1 = 22 ) => setTimeout( () => task1, 3000 ) ).then( ( task2 ) => s
 Promise.all( [ p ] ).then( ( data ) => {
     console.log( data )
 } )
+
+
 
 
 // Now what if each of the console has a specific time they used to complete there execution
@@ -97,21 +129,21 @@ const promise1 = new Promise( ( resolve, reject ) => {
 
 const promise2 = new Promise( ( resolve, reject ) => {
     setTimeout( () => {
-        resolve( "Task2: My task takes 2 seconds to Finish" )
+        resolve( "Task2: Take My Bath takes 2 seconds to Finish" )
     }, 2000 );
 } )
 
 
 const promise3 = new Promise( ( resolve, reject ) => {
     setTimeout( () => {
-        resolve( "Task3: My task takes 1 second to Finish" )
+        resolve( "Bord a Taxi: My task takes 1 second to Finish" )
     }, 1000 );
 } )
 
 
 const promise4 = new Promise( ( resolve, reject ) => {
     setTimeout( () => {
-        resolve( "Task4: My task takes 1.5 seconds to Finish" )
+        resolve( "Arrive at school: My task takes 1.5 seconds to Finish" )
     }, 1500 );
 } )
 

@@ -1,229 +1,212 @@
-
 // storage vairble
 let TodoList;
 
 let index;
 
-
-if ( localStorage.TodoList ) {
-    TodoList = JSON.parse( localStorage.getItem( "TodoList" ) )
+if (localStorage.TodoList) {
+  TodoList = JSON.parse(localStorage.getItem('TodoList'));
 } else {
-    TodoList = []
-    localStorage.setItem( "TodoList", JSON.stringify( TodoList ) )
+  TodoList = [];
+  localStorage.setItem('TodoList', JSON.stringify(TodoList));
+}
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
 }
 
 //where we will collect teh user Input
 
-
 //collect user input
-let Task = document.getElementById( "task" );
-let Time = document.getElementById( "time" );
-let Personell = document.getElementById( "personell" );
-
+let Task = document.getElementById('task');
+let Time = document.getElementById('time');
+let Personell = document.getElementById('personell');
 
 //hide the form onload
-function hideFormAndOverlay () {
-    document.querySelector( 'fieldset' ).style.display = "none";
-    document.querySelector( '.overlay' ).style.display = "none";
+function hideFormAndOverlay() {
+  document.querySelector('fieldset').style.display = 'none';
+  document.querySelector('.overlay').style.display = 'none';
 }
 
+hideFormAndOverlay();
 
-hideFormAndOverlay()
-
-
-
-
-function kikstartBtn () {
-    document.querySelector( 'fieldset' ).style.display = "block"
-    document.querySelector( '.overlay' ).style.display = "block";
+function kikstartBtn() {
+  document.querySelector('fieldset').style.display = 'block';
+  document.querySelector('.overlay').style.display = 'block';
 }
 
-document.querySelector( "#modalBtn" ).addEventListener( 'click', kikstartBtn )
+document.querySelector('#modalBtn').addEventListener('click', kikstartBtn);
 
-function loadState () {
-    document.querySelector( "#updateBtn" ).classList.add( 'hidden' )
-    document.querySelector( "#submitTask" ).classList.add( 'block' )
+function loadState() {
+  document.querySelector('#updateBtn').classList.add('hidden');
+  document.querySelector('#submitTask').classList.add('block');
 }
-loadState()
+loadState();
 
+function closeFormAndOverlay() {
+  document.querySelector('#updateBtn').classList.add('hidden');
+  document.querySelector('#submitTask').classList.remove('hidden');
 
+  document.querySelector('fieldset').style.display = 'none';
+  document.querySelector('.overlay').style.display = 'none';
 
-function closeFormAndOverlay () {
-    document.querySelector( "#updateBtn" ).classList.add( "hidden" )
-    document.querySelector( "#submitTask" ).classList.remove( 'hidden' )
-
-    document.querySelector( 'fieldset' ).style.display = "none"
-    document.querySelector( '.overlay' ).style.display = "none";
-
-    let Statuss = [ ...document.querySelectorAll( '.status' ) ]
-    Statuss.map( ( item ) => {
-        item.innerHTML = "Add"
-    } )
-
+  let Statuss = [...document.querySelectorAll('.status')];
+  Statuss.map((item) => {
+    item.innerHTML = 'Add';
+  });
 }
 
-document.querySelector( '#close' ).addEventListener( "click", closeFormAndOverlay )
-document.querySelector( '.overlay' ).addEventListener( "click", closeFormAndOverlay )
+document.querySelector('#close').addEventListener('click', closeFormAndOverlay);
+document
+  .querySelector('.overlay')
+  .addEventListener('click', closeFormAndOverlay);
 
-function createToast ( message ) {
-    document.querySelector( "#toastContainer" ).innerHTML = `<div id="toast"><p>${message}</p> </div>`;
+function createToast(message) {
+  document.querySelector(
+    '#toastContainer'
+  ).innerHTML = `<div id="toast"><p>${message}</p> </div>`;
 
-    if ( message == "Sucessfully Added" ) {
-        document.querySelector( "#toast" ).style.backgroundColor = "#28a745";
-    } else if ( message == "Sucessfully Updated" ) {
-        document.querySelector( "#toast" ).style.backgroundColor = "orange";
-    } else if ( message == "Sucessfully Deleted" ) {
-        document.querySelector( "#toast" ).style.backgroundColor = "red";
-    }
+  if (message == 'Sucessfully Added') {
+    document.querySelector('#toast').style.backgroundColor = '#28a745';
+  } else if (message == 'Sucessfully Updated') {
+    document.querySelector('#toast').style.backgroundColor = 'orange';
+  } else if (message == 'Sucessfully Deleted') {
+    document.querySelector('#toast').style.backgroundColor = 'red';
+  }
 }
-function showToast ( toastElement ) {
-    toastElement.classList.add( "show" );
-    setTimeout( () => {
-        toastElement.classList.remove( "show" );
-    }, 1000 ); // Hide after 3 seconds
+function showToast(toastElement) {
+  toastElement.classList.add('show');
+  setTimeout(() => {
+    toastElement.classList.remove('show');
+  }, 1000); // Hide after 3 seconds
 }
 
 // const toastBtn = document.querySelector( "#showToast" );
 // toastBtn.addEventListener( "click", () => showToast( toast ) );
 
+function ProcessAndSendInput() {
+  let currenTodo = {
+    task: Task.value,
+    time: Time.value,
+    personell: Personell.value,
+  };
 
-function ProcessAndSendInput () {
-    let currenTodo = {
-        task: Task.value,
-        time: Time.value,
-        personell: Personell.value,
-    };
+  ///  TodoList.push(currenTodo);
+  if (Task.value == '' && Time.value == '' && Personell.value == '') {
+    alert('enet something');
+  } else {
+    TodoList = [currenTodo, ...TodoList];
+    console.log(TodoList);
+    localStorage.setItem('TodoList', JSON.stringify(TodoList));
 
-
-    ///  TodoList.push(currenTodo);
-    if ( Task.value == "" && Time.value == "" && Personell.value == "" ) {
-        alert( "enet something" );
-    } else {
-
-        TodoList = [ currenTodo, ...TodoList ]
-        console.log( TodoList )
-        localStorage.setItem( "TodoList", JSON.stringify( TodoList ) )
-
-        AddToDom();
-        createToast( "Sucessfully Added" )
-        showToast( toast )
-    }
+    AddToDom();
+    console.log(TodoList);
+    createToast('Sucessfully Added');
+    showToast(toast);
+  }
 }
 
-
-function changeStatus () {
-    document.querySelectorAll( '.status' ).map( ( item ) => {
-        item.innerHTML = "Edit"
-    } )
+function changeStatus() {
+  document.querySelectorAll('.status').map((item) => {
+    item.innerHTML = 'Edit';
+  });
 }
 
 //add Todos to the dom
-function AddToDom () {
+function AddToDom() {
+  // document.querySelector( `#submitTask` ).classList.remove( "hidden" )
 
+  TodoList = JSON.parse(localStorage.getItem('TodoList'));
 
-    // document.querySelector( `#submitTask` ).classList.remove( "hidden" )
-
-    TodoList = JSON.parse( localStorage.getItem( 'TodoList' ) )
-
-    let display = "";
-    for ( let i = 0; i < TodoList.length; i++ ) {
-        display = display + `<tr>
-<td>${TodoList[ i ].task}</td>
-<td>${TodoList[ i ].personell}</td>
-<td>${TodoList[ i ].time}</td>
+  let display = '';
+  for (let i = 0; i < TodoList.length; i++) {
+    display =
+      display +
+      `<tr>
+<td>${TodoList[i].task}</td>
+<td>${TodoList[i].personell}</td>
+<td>${TodoList[i].time}</td>
 <td> <button onclick='deleteTodo(${i})' class="delete">Delete</button> </td>
 <td>  <button onclick='Edit(${i})' class="edit${i} edit show">Edit</button>  <button onclick='update(${i})' class="update${i} update hidden">Update</button> </td>
 </tr>`;
-    }
+  }
 
-    document.getElementById( "table-body" ).innerHTML = display;
+  document.getElementById('table-body').innerHTML = display;
 
-    resetForm();
+  resetForm();
 }
 AddToDom();
 
-function resetForm () {
-    Task.value = "";
-    Personell.value = "";
-    Time.value = "";
+function resetForm() {
+  Task.value = '';
+  Personell.value = '';
+  Time.value = '';
 }
 
+function deleteTodo(i) {
+  TodoList.splice(i, 1);
+  localStorage.setItem('TodoList', JSON.stringify(TodoList));
+  AddToDom();
+  createToast('Sucessfully Deleted');
+  showToast(toast);
+}
 
-function deleteTodo ( i ) {
-    TodoList.splice( i, 1 );
-    localStorage.setItem( "TodoList", JSON.stringify( TodoList ) );
+function Edit(i) {
+  let Statuss = [...document.querySelectorAll('.status')];
+  Statuss.map((item) => {
+    item.innerHTML = 'Edit';
+  });
+
+  kikstartBtn();
+  index = i;
+  console.log(index);
+  TodoList = JSON.parse(localStorage.getItem('TodoList'));
+
+  Task.value = TodoList[i].task;
+  Time.value = TodoList[i].time;
+  Personell.value = TodoList[i].personell;
+
+  document.querySelector('#updateBtn').classList.remove('hidden');
+  document.querySelector('#submitTask').classList.add('hidden');
+  console.log(TodoList[i]);
+}
+
+function update() {
+  console.log(index);
+  TodoList = JSON.parse(localStorage.getItem('TodoList'));
+
+  if (Task.value !== '' && Time.value !== '' && Personell.value !== '') {
+    TodoList[index].task = Task.value;
+    TodoList[index].time = Time.value;
+    TodoList[index].personell = Personell.value;
+    localStorage.setItem('TodoList', JSON.stringify(TodoList));
     AddToDom();
-    createToast( "Sucessfully Deleted" )
-    showToast( toast )
+    createToast('Sucessfully Updated');
+    showToast(toast);
+  } else {
+    alert('You Need to Pass in the missing values');
+  }
 }
-
-function Edit ( i ) {
-
-    let Statuss = [ ...document.querySelectorAll( '.status' ) ]
-    Statuss.map( ( item ) => {
-        item.innerHTML = "Edit"
-    } )
-
-
-    kikstartBtn()
-    index = i
-    console.log( index )
-    TodoList = JSON.parse( localStorage.getItem( 'TodoList' ) )
-
-    Task.value = TodoList[ i ].task;
-    Time.value = TodoList[ i ].time;
-    Personell.value = TodoList[ i ].personell
-
-
-
-    document.querySelector( "#updateBtn" ).classList.remove( "hidden" )
-    document.querySelector( "#submitTask" ).classList.add( 'hidden' )
-    console.log( TodoList[ i ] )
-}
-
-
-function update () {
-    console.log( index )
-    TodoList = JSON.parse( localStorage.getItem( 'TodoList' ) )
-
-    if ( Task.value !== "" && Time.value !== "" && Personell.value !== "" ) {
-        TodoList[ index ].task = Task.value;
-        TodoList[ index ].time = Time.value;
-        TodoList[ index ].personell = Personell.value;
-        localStorage.setItem( "TodoList", JSON.stringify( TodoList ) );
-        AddToDom();
-        createToast( "Sucessfully Updated" )
-        showToast( toast )
-
-
-
-    } else {
-        alert( "You Need to Pass in the missing values" )
-    }
-}
-
-
 
 class HumanBeing {
-    constructor( name, age ) {
-        this.name = name;
-        this.age = age;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-    GenrateDOB () {
-        return 2024 - this.age
-    }
-
+  GenrateDOB() {
+    return 2024 - this.age;
+  }
 }
 
 class AptechStudent extends HumanBeing {
-    constructor( name, age, dept, score ) {
-        super( name, age )
-        this.dept = dept;
-        this.score = score;
-    }
+  constructor(name, age, dept, score) {
+    super(name, age);
+    this.dept = dept;
+    this.score = score;
+  }
 
-    GetDetails () {
-        return `  My name is ${this.name} and i am ${this.age} years old and i visit aptech to learn ${this.dept}`
-    }
+  GetDetails() {
+    return `  My name is ${this.name} and i am ${this.age} years old and i visit aptech to learn ${this.dept}`;
+  }
 }
